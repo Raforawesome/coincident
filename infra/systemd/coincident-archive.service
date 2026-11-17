@@ -1,0 +1,24 @@
+[Unit]
+Description=Coincident raw data archiver (IESO, Open-Meteo)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=coincident
+Group=coincident
+Environment=COINCIDENT_ARCHIVE=/srv/coincident/raw
+Environment=COINCIDENT_WORKERS=4
+ExecStart=/usr/bin/python3 -I /opt/coincident/archive.py run
+# First run backfills ~40k files and takes hours; the timer won't start a
+# second copy while one is still running.
+TimeoutStartSec=infinity
+Nice=10
+IOSchedulingClass=idle
+
+# Hardening: can only write to the archive directory
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+ReadWritePaths=/srv/coincident/raw
