@@ -9,3 +9,8 @@ raw/
 node_modules/
 .next/
 .DS_Store
+
+# private agent context (never commit)
+AGENTS.md
+CLAUDE.md
+CLAUDE.local.md

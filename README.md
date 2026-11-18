@@ -15,7 +15,8 @@ Planned pieces:
   against the IESO Peak Tracker
 - Grid carbon intensity and "cleanest hours in the next 24h"
 
-See [docs/brief.md](docs/brief.md) for the full brief and
+See [docs/scope.md](docs/scope.md) for scope and goals,
+[docs/brief.md](docs/brief.md) for the full brief, and
 [docs/decisions.md](docs/decisions.md) for the design log.
 
 ## Status
