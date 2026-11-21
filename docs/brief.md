@@ -42,7 +42,7 @@ A forecasting system for Ontario's electricity grid, built from public data. It 
   - `GenOutputCapability/`: hourly output per generator (≥20 MW), with forecasts for wind/solar
   - `GenOutputbyFuelHourly/`: historical output by fuel
   - `OntarioZonalDemand/`: zonal demand forecast up to 34 days out
-  - Multi-day Ontario demand forecast: `https://www.ieso.ca/-/media/Files/IESO/Power-Data/Ontario-Demand-multiday.ashx`
+  - ~~Multi-day Ontario demand forecast (`Ontario-Demand-multiday.ashx`)~~: frozen since 2025-04-30. Use `Adequacy3/` for IESO's demand forecast (see decisions.md).
   - Long historical demand CSVs (back to 2002) via the IESO Data Directory page
   - ICI Peak Tracker: `https://www.ieso.ca/peaktracker`
 - **`gridstatus` Python library:** already wraps many IESO endpoints. Use it as a reference or for quick starts, but our fetchers must still archive raw files ourselves.

@@ -29,8 +29,8 @@ See [docs/scope.md](docs/scope.md) for scope and goals,
 ## Raw archiver
 
 [`packages/ingest/src/coincident_ingest/archive.py`](packages/ingest/src/coincident_ingest/archive.py)
-mirrors selected IESO public report directories plus a few overwrite-in-place
-sources (IESO multi-day demand forecast, Open-Meteo forecasts). Several IESO
+mirrors selected IESO public report directories plus overwrite-in-place
+sources (currently Open-Meteo forecasts). Several IESO
 reports keep only about 30 days of history, so this runs before anything else
 exists. It is standard-library-only Python (3.9+), with no parsing.
 
