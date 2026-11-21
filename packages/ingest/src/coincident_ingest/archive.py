@@ -85,9 +85,9 @@ OPEN_METEO_URL = (
 )
 SNAPSHOT_SOURCES = [
     # (source, report, url, filename, min_interval_s)
-    ("ieso_web", "OntarioDemandMultiday",
-     "https://www.ieso.ca/-/media/Files/IESO/Power-Data/Ontario-Demand-multiday.ashx",
-     "Ontario-Demand-multiday.xml", 0),
+    # The IESO multi-day demand forecast (Ontario-Demand-multiday.ashx) was
+    # removed: frozen at CreatedAt 2025-04-30 since the market change. IESO's
+    # demand forecast comes from the Adequacy3 report instead (see decisions.md).
     ("open_meteo", "forecast", OPEN_METEO_URL,
      "forecast_" + "_".join(CITIES) + ".json", 55 * 60),
 ]

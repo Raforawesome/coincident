@@ -144,8 +144,8 @@ Measured on 2026-11-16/17; re-check them before relying on them.
 
 Each of these should become an issue when someone picks it up.
 
-- IESO time convention: hour-ending, EST vs EDT, and how DST days look in
-  each report.
+- ~~IESO time convention~~: resolved. Hour-ending in fixed EST (UTC−5) all
+  year; see [decisions.md](decisions.md).
 - A lead-time-correct source for historical weather forecasts.
 - Exactly which demand series ICI uses for peak determination, and how far
   adjusted values move after the fact.
